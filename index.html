@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Particle Canvas Background -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">&lt;</span>
+      <span class="logo-text">Angelo Miguel A. Besliños</span>
+      <span class="logo-bracket">/&gt;</span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <p class="hero-greeting reveal-up">Hello, I'm</p>
+      <h1 class="hero-name reveal-up">
+        <span class="name-text">Angelo Miguel A. Besliños</span>
+      </h1>
+      <div class="hero-role reveal-up">
+        <span>I'm a </span>
+        <span class="typed-text" id="typed-text"></span>
+        <span class="cursor-blink">|</span>
+      </div>
+      <p class="hero-bio reveal-up">
+        Crafting beautiful digital experiences with clean code and creative design.
+        Passionate about building things that live on the internet.
+      </p>
+      <div class="hero-buttons reveal-up">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-outline">Hire Me</a>
+      </div>
+      <div class="hero-socials reveal-up">
+        <a href="https://github.com/gelobeslinos" class="social-icon" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/angelo-miguel-besli%C3%B1os-813b63347/" class="social-icon" target="_blank" ria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://x.com/BeslinosGelo" class="social-icon" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.facebook.com/migsbeslinos" class="social-icon" target="_blank" aria-label="facebook"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+    <div class="hero-visual reveal-right">
+      <div class="avatar-container">
+        <div class="avatar-ring ring-1"></div>
+        <div class="avatar-ring ring-2"></div>
+        <div class="avatar-ring ring-3"></div>
+        <!--<div class="avatar-ring ring-4"></div> -->
+        <div class="avatar-placeholder">
+          <img src="images/122.jpg" alt="Angelo Besliños">
+      </div>
+      </div>
+      <div class="floating-badge badge-1"><i class="fab fa-laravel"></i> Laravel</div>
+      <div class="floating-badge badge-2"><i class="fab fa-python"></i> Python</div>
+      <div class="floating-badge badge-3"><i class="fab fa-react"></i> React</div>
+    </div>
+    <a href="#about" class="scroll-down" aria-label="Scroll down">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+    </a>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Get to know me</span>
+        <h2 class="section-title">About <span class="highlight">Me</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-image reveal-left">
+          <div class="image-card">
+            <div class="image-placeholder">
+              <img src="images/122.jpg" alt="My Picture">
+            </div>
+            <div class="image-decoration"></div>
+          </div>
+        </div>
+        <div class="about-text reveal-right">
+          <h3>A passionate Troubleshooter in <span class="highlight">Computer</span></h3>
+          <p>
+            I am a dedicated and hardworking individual with a strong interest in technical support and computer maintenance. I
+have basic knowledge of computer hardware and software troubleshooting also basic knowledge in Full Stack Development, system setup, and technical assistance. I
+am eager to expand my skills, learn from experienced professionals, and contribute positively to an organization's
+technical support team.
+
+          </p>
+          <p>
+            When I'm not coding, you can find me exploring new technologies,
+            contributing to open source, or sipping coffee while sketching new project ideas.
+          </p>
+          <a href="files/AngeloMiguelBeslliños_cv.pdf"
+            class="btn btn-primary"
+            download="Angelo_Beslinos_Resume.pdf">
+              <i class="fas fa-download"></i> Download CV
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS SECTION ===== -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">What I know</span>
+        <h2 class="section-title">My <span class="highlight">Skills</span></h2>
+      </div>
+      <div class="skills-grid">
+        <!-- Skill Cards -->
+        <div class="skill-card reveal-up" style="--delay: 0.1s">
+          <div class="skill-icon"><i class="fab fa-html5"></i></div>
+          <h4>HTML5</h4>
+          <div class="skill-bar"><div class="skill-fill" data-width="95%"></div></div>
+          <span class="skill-percent">95%</span>
+        </div>
+        <div class="skill-card reveal-up" style="--delay: 0.2s">
+          <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+          <h4>CSS3</h4>
+          <div class="skill-bar"><div class="skill-fill" data-width="90%"></div></div>
+          <span class="skill-percent">90%</span>
+        </div>
+        <div class="skill-card reveal-up" style="--delay: 0.3s">
+          <div class="skill-icon"><i class="fab fa-js"></i></div>
+          <h4>JavaScript</h4>
+          <div class="skill-bar"><div class="skill-fill" data-width="88%"></div></div>
+          <span class="skill-percent">88%</span>
+        </div>
+        <div class="skill-card reveal-up" style="--delay: 0.4s">
+          <div class="skill-icon"><i class="fab fa-react"></i></div>
+          <h4>React</h4>
+          <div class="skill-bar"><div class="skill-fill" data-width="82%"></div></div>
+          <span class="skill-percent">82%</span>
+        </div>
+        <div class="skill-card reveal-up" style="--delay: 0.5s">
+          <div class="skill-icon"><i class="fab fa-python"></i></div>
+          <h4>Python</h4>
+          <div class="skill-bar"><div class="skill-fill" data-width="85%"></div></div>
+          <span class="skill-percent">85%</span>
+        </div>
+        <div class="skill-card reveal-up" style="--delay: 0.6s">
+          <div class="skill-icon"><i class="fab fa-laravel"></i></div>
+          <h4>Laravel</h4>
+          <div class="skill-bar"><div class="skill-fill" data-width="78%"></div></div>
+          <span class="skill-percent">78%</span>
+        </div>
+        <div class="skill-card reveal-up" style="--delay: 0.7s">
+          <div class="skill-icon"><i class="fas fa-database"></i></div>
+          <h4>SQL / PostgreSQL</h4>
+          <div class="skill-bar"><div class="skill-fill" data-width="75%"></div></div>
+          <span class="skill-percent">75%</span>
+        </div>
+        <div class="skill-card reveal-up" style="--delay: 0.8s">
+          <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+          <h4>Git</h4>
+          <div class="skill-bar"><div class="skill-fill" data-width="92%"></div></div>
+          <span class="skill-percent">92%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS SECTION ===== -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">What I've built</span>
+        <h2 class="section-title">My <span class="highlight">Projects</span></h2>
+      </div>
+      <div class="project-filters reveal-up">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="app">App</button>
+        <button class="filter-btn" data-filter="python">Python</button>
+      </div>
+      <div class="projects-grid" id="projects-grid">
+
+        <div class="project-card reveal-up" data-category="web" style="--delay: 0.1s">
+          <div class="project-image">
+            <div class="project-img-placeholder">
+              <img src="images/2.JPG" alt="Inventory Management System">
+            </div>
+            <div class="project-overlay">
+              <a href="https://github.com/ajbuttowski25/oursystem" class="project-link" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Web</span>
+            <h3>Inventory Management With Predictive Analytics</h3>
+            <p>A fully responsive Inventory Management System, Rolebased Auth, Focecasting Demand.</p>
+            <div class="project-tech">
+              <span>ReactVite</span><span>Python</span><span>Laravel</span><span>PostgreSql</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up" data-category="python" style="--delay: 0.2s">
+          <div class="project-image">
+            <div class="project-img-placeholder">
+            <img src="images/1.JPG" alt="Student Profiling">
+            </div>
+            <div class="project-overlay">
+              <a href="https://github.com/gelobeslinos/AMABITEW6" class="project-link" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i>
+            </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Web</span>
+            <h3>Student Profiling</h3>
+            <p>A Student Profiling System with filtering and search of Interest,Skills and Talents.</p>
+            <div class="project-tech">
+              <span>React TypeScript</span><span>Laravel</span><span>sqlLite</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Let's talk</span>
+        <h2 class="section-title">Get In <span class="highlight">Touch</span></h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <h3>Let's work together</h3>
+          <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <span>Email</span>
+                <a href="mailto:your@email.com">gelobeslinos10@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <span>Phone</span>
+                <a href="tel:+1234567890">09090866753</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <span>Location</span>
+                <p>Cabuyao City, Laguna</p>
+              </div>
+            </div>
+          </div>
+        </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span class="logo-bracket">&lt;</span>
+          <span class="logo-text">Angelo Miguel A. Besliños</span>
+          <span class="logo-bracket">/&gt;</span>
+        </div>
+        <p>Crafted with <i class="fas fa-heart" style="color: var(--accent)"></i> and lots of coffee</p>
+        <div class="footer-socials">
+          <a href="https://github.com/gelobeslinos" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/angelo-miguel-besli%C3%B1os-813b63347/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://x.com/BeslinosGelo" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://facebook.com/migsbeslinos" target="_blank" aria-label="facebook"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+      <p class="footer-copy">&copy; 2026 Angelo Miguel A. Besliños . All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="particles.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
